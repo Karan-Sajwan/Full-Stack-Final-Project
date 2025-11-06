@@ -1,0 +1,157 @@
+body {
+  background: #f8fbff;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  margin: 0;
+}
+
+.nimbus-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background: #fff;
+  border-bottom: 1px solid #e6ecf9;
+}
+.nimbus-logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.35rem;
+  font-weight: bold;
+  color: #23a6f0;
+}
+.nimbus-logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+.nimbus-navbar nav a {
+  margin: 0 16px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+.nimbus-register-btn {
+  background: #23a6f0;
+  color: #fff !important;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-left: 12px;
+  transition: background .2s;
+}
+.nimbus-register-btn:hover { background: #1b7fc4; }
+
+.nimbus-hero {
+  position: relative;
+  padding: 0 0 32px 0;
+  min-height: 360px;
+  text-align: center;
+  background: #eef6fa;
+  overflow: hidden;
+}
+.nimbus-hero-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;
+  opacity: 0.36;
+  pointer-events: none;
+}
+.nimbus-hero-overlay {
+  position: relative;
+  z-index: 2;
+  padding: 6rem 0 3rem 0;
+}
+.nimbus-badge {
+  display: inline-block;
+  background: #e8f2ff;
+  color: #23a6f0;
+  border-radius: 999px;
+  padding: 6px 22px;
+  font-size: 0.98rem;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+.nimbus-hero h1 {
+  font-size: 2.75rem;
+  font-weight: 800;
+  margin: 0 0 12px 0;
+  color: #284160;
+}
+.nimbus-hero .accent {
+  color: #23a6f0;
+  font-weight: 900;
+}
+.nimbus-hero p {
+  color: #5a7291;
+  max-width: 570px;
+  margin: 0 auto 2.2rem auto;
+  font-size: 1.16rem;
+}
+.nimbus-cta-buttons a {
+  margin: 0 8px;
+  font-size: 1.07rem;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: background 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+.nimbus-btn-primary {
+  background: #23a6f0;
+  color: #fff;
+  padding: 0.9em 2.1em;
+  box-shadow: 0 4px 24px 0 #71d0ff2b;
+}
+.nimbus-btn-primary:hover { background: #1a88bd; }
+.nimbus-btn-secondary {
+  background: #fff;
+  color: #284160;
+  border: 1px solid #e6ecf9;
+  padding: 0.9em 1.8em;
+  margin-left: 5px;
+}
+.nimbus-btn-secondary:hover { background: #f0f5fa; }
+
+.nimbus-features {
+  background: #f4f8fc;
+  padding: 3.5rem 0 3rem 0;
+  text-align: center;
+}
+.nimbus-features h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #234060;
+  margin-bottom: 2.1rem;
+}
+.nimbus-feature-row {
+  display: flex;
+  justify-content: center;
+  gap: 2.7rem;
+  flex-wrap: wrap;
+}
+.nimbus-feature-card {
+  background: #fff;
+  border: 1px solid #e6ecf9;
+  border-radius: 18px;
+  box-shadow: 0 1px 4px 0 #c7e7f733;
+  width: 320px; min-height: 140px;
+  margin: 10px 0;
+  padding: 2rem 1.6rem 1.5rem 1.6rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  transition: box-shadow .18s;
+}
+.nimbus-feature-card:hover {
+  box-shadow: 0 8px 28px 0 #2683c930;
+}
+.nimbus-feature-icon {
+  font-size: 2.2rem;
+  color: #23a6f0;
+  margin-bottom: 16px;
+}
+.nimbus-feature-desc {
+  color: #4b6477;
+  font-size: 1.04rem;
+  margin-top: 0.7rem;
+  font-weight: 400;
+}

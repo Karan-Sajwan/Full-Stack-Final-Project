@@ -3,7 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
-const userRoutes = require('./routes/user');
+const userRoutes = require('./routes/User');
 const postRoutes = require('./routes/post');
 
 const app = express(); // <-- This must come before any app.use!

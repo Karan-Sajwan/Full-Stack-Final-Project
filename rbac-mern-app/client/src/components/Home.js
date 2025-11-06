@@ -1,42 +1,58 @@
 import React from "react";
-
-const blogPosts = [
-  { title: "Welcome to Role-Based Access Website", body: "Explore secure access management and learn how different roles interact!" },
-  { title: "Editor Tips", body: "Editors can create and manage posts—and learn best practices for content creation." },
-  { title: "Viewer Guide", body: "Viewers get read-only access! Wondering what you can and can't do?" }
-];
-
-const randomComments = [
-  "Great content on security roles!",
-  "I love the simple layout.",
-  "Can editors create comments too?",
-  "Looking forward to new features.",
-  "How do I become an admin?"
-];
+import { Link } from "react-router-dom";
+import "./Home.css";
 
 export default function Home() {
-  // Select 3 random comments for fun
-  const shuffled = randomComments.sort(() => 0.5 - Math.random());
-  const pickedComments = shuffled.slice(0, 3);
-
   return (
-    <div style={{ maxWidth: "800px", margin: "2rem auto", padding: "2rem 1rem", background: "#fff", borderRadius: "12px", boxShadow: "0 2px 20px rgba(60,90,150,0.04)" }}>
-      <h2 style={{ textAlign: "center", marginBottom: "2rem", color: "#3778C2" }}>Home</h2>
-      <div>
-        {blogPosts.map((post, i) => (
-          <div key={i} style={{ marginBottom: "1.5rem", padding: "1rem", border: "1px solid #ddd", borderRadius: "8px" }}>
-            <strong style={{fontSize:"1.2rem"}}>{post.title}</strong>
-            <p>{post.body}</p>
+    <div className="nimbus-home">
+      {/* Header/Navbar */}
+     
+
+      {/* Hero section */}
+      <section className="nimbus-hero">
+        <div className="nimbus-hero-overlay">
+          <div className="nimbus-badge">Enterprise-Grade Access Control</div>
+          <h1>
+            Secure Role-Based <br /><span className="accent">Access Management</span>
+          </h1>
+          <p>
+            Empower your team with granular permissions. Admin, Editor, and Viewer roles designed for modern collaboration.
+          </p>
+          <div className="nimbus-cta-buttons">
+            <Link to="/register" className="nimbus-btn-primary">Get Started</Link>
+            <Link to="/login" className="nimbus-btn-secondary">Sign In</Link>
           </div>
-        ))}
-      </div>
-      <hr style={{margin:"2rem 0"}}/>
-      <h4 style={{ color: "#333", marginBottom: "0.5rem" }}>Recent Comments</h4>
-      {pickedComments.map((comment, i) => (
-        <div key={i} style={{ marginBottom: "0.8rem", fontStyle: "italic", color: "#555" }}>
-          “{comment}”
         </div>
-      ))}
+        <img src="/cloud-bg.jpg" alt="" className="nimbus-hero-bg" />
+      </section>
+
+      {/* Key Features section */}
+      <section className="nimbus-features">
+        <h2>Key Features</h2>
+        <div className="nimbus-feature-row">
+          <div className="nimbus-feature-card">
+            <div className="nimbus-feature-icon">🔒</div>
+            <strong>Secure by Design</strong>
+            <div className="nimbus-feature-desc">
+              Database-level security with Row Level Security policies ensuring data protection at every layer.
+            </div>
+          </div>
+          <div className="nimbus-feature-card">
+            <div className="nimbus-feature-icon">👤</div>
+            <strong>Role Management</strong>
+            <div className="nimbus-feature-desc">
+              Easily assign and manage Admin, Editor, and Viewer roles with fine-grained permission control.
+            </div>
+          </div>
+          <div className="nimbus-feature-card">
+            <div className="nimbus-feature-icon">📄</div>
+            <strong>Content Control</strong>
+            <div className="nimbus-feature-desc">
+              Role-based content creation and management. Editors create, viewers consume, admins oversee all.
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
