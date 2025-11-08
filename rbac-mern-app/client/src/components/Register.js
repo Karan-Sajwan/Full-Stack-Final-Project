@@ -150,7 +150,6 @@ export default function Register() {
             >
               <option value="viewer">Viewer - View content only</option>
               <option value="editor">Editor - Create and edit content</option>
-              <option value="admin">Admin - Full system access</option>
             </select>
           </div>
           
@@ -162,15 +161,6 @@ export default function Register() {
         <p className="auth-footer">
           Already have an account? <Link to="/login" className="auth-link">Sign in</Link>
         </p>
-
-        {/* Admin Info Notice */}
-        <div className="admin-info-notice">
-          <p>🛡️ <strong>Admin Account Available</strong></p>
-          <p className="admin-info-text">
-            Email: admin@knightblogs.com<br />
-            Password: admin123
-          </p>
-        </div>
       </div>
     </div>
   );
